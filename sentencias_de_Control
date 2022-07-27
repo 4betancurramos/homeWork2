@@ -1,0 +1,95 @@
+/*Para los ejercicios del 1 al 3 usare un generador de numeros aleatorios por medio de java.util.Random
+import java.util.Random*/
+
+/*1.Usando un if, crear una condición que compare si la variable numeroIf es positivo, negativo, o 0.
+Pista: Los números inferiores a 0 son negativos y los superiores, positivos*/
+
+import java.util.Random;
+public class Main {
+    public static void main(String[] args) {
+        Random num = new Random ();
+        int numeroIF = num.nextInt(10);
+        System.out.println("El número aleatorio es: " + numeroIF);
+
+        if (numeroIF == 0) {
+            System.out.println("El número es igual a cero");
+        } else if (numeroIF > 0) {
+            System.out.println("es un número positivo");
+        } else {
+            System.out.println("es un número negativo");
+        }
+    }
+}
+
+/*2.Crea un bucle While, este bucle deberá tener como condición que la variable numeroWhile
+sea inferior a 3, el bloque de código que tendrá el bucle deberá:
+Incrementar el valor de la variable en uno cada vez que se ejecute.
+Mostrarlo por pantalla cada vez que se ejecute*/
+
+import java.util.Random;
+public class Main {
+    public static void main (String[] args){
+        Random num = new Random ();
+        int numeroWhile = num.nextInt(10);
+        System.out.println("El número aleatorio es: " + numeroWhile);
+
+        while (numeroWhile < 3){
+            System.out.println("Numero vale: " + numeroWhile);
+            numeroWhile = numeroWhile + 1;
+        }
+    }
+}
+
+/*3.Para el bucle Do While, deberás crear la misma estructura que en el While, 
+pero solo se debe ejecutar una vez*/
+
+import java.util.Random;
+public class Main {
+    public static void main (String[] args){
+        Random num = new Random ();
+        int numeroWhile = num.nextInt(10);
+        System.out.println("El número aleatorio es: " + numeroWhile);
+
+        do {
+            System.out.println("Numero vale: " + numeroWhile);
+            numeroWhile = numeroWhile + 1;
+        } while (numeroWhile < 3);
+    }
+}
+
+/*4.Para el bucle For, crea una variable numeroFor, esta variable tendrá como valor 0
+y su condición será que la variable sea igual o menor que 3, se irá incrementando
+en 1 su valor cada vez que se ejecute y deberá mostrarse por pantalla*/
+
+public  class Main {
+    public static void main(String[] args){
+
+        for (int numeroFor = 0; numeroFor <= 3; numeroFor = numeroFor +1){
+            System.out.println(numeroFor);
+        }
+    }
+}
+
+/*5.Por último, para el Switch, deberás crear la variable estación,
+y distintos case para las cuatro estaciones del año.
+Dependiendo del valor de la variable estación se deberá mandar un mensaje
+por consola informando de la estación en la que está. También habrá que poner
+un default para cuando el valor de la variable no sea una estación*/
+
+public class Main {
+    public static void main (String[] args){
+        
+        var estacion = "invierno";
+
+        switch (estacion){
+            case "verano":
+            case "invierno":
+            case "otoño":
+            case "primavera":
+                System.out.println("La estación es: " + estacion);
+                break;
+            default:
+                System.out.println("estoy en default");
+        }
+    }
+}
